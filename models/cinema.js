@@ -20,7 +20,16 @@ Cinema.prototype.findByYear = function (year) {
     return 'There are no films from this year.'
   } else {
     return foundFilms;
-  };  
+  };
+};
+
+Cinema.prototype.allFilmsParticularLength = function (length) {
+  const films = this.films.filter(film => film.length > length);
+  if (films.length === this.films.length) {
+    return true;
+  } else {
+    return false;
+  };
 };
 
 
