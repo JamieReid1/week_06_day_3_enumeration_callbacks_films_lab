@@ -10,6 +10,10 @@ Cinema.prototype.filmByTitle = function (title) {
   return this.films.find(film => film.title === title)
 };
 
+Cinema.prototype.filmByGenre = function (genre) {
+  return this.films.filter(film => film.genre === genre);
+};
+
 
 };
 
