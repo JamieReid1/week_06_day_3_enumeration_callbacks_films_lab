@@ -1,3 +1,4 @@
+
 const assert = require('assert');
 const Film = require('../models/film.js');
 
@@ -6,8 +7,11 @@ describe('Film', function () {
   let moonlight;
 
   beforeEach(function () {
+
     moonlight = new Film('Moonlight', 'drama', 2016, 111);
+
   });
+
 
   it('should have a title', function () {
     const actual = moonlight.title;
@@ -28,5 +32,6 @@ describe('Film', function () {
     const actual = moonlight.length;
     assert.strictEqual(actual, 111);
   });
+  
 
 });
