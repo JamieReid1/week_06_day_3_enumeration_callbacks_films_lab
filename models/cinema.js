@@ -32,6 +32,19 @@ Cinema.prototype.allFilmsParticularLength = function (length) {
   };
 };
 
+Cinema.prototype.totalRunTime = function () {
+  let totalRunTime = 0
+  const runTime = this.films.map(film => film.length);
+  for (time of runTime) {
+    totalRunTime += time
+  };
+  return totalRunTime;
+   // let runTime = this.films.reduce((runningTotal, length) => {
+  //   return runningTotal + films.length;
+  // });
+  // return runTime;
+};
+
 
 };
 
