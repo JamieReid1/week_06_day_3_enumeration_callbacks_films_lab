@@ -1,3 +1,4 @@
+
 const assert = require('assert');
 const Cinema = require('../models/cinema.js');
 const Film = require('../models/film.js');
@@ -13,6 +14,7 @@ describe('Cinema', function () {
   let cinema;
 
   beforeEach(function () {
+
     moonlight = new Film('Moonlight', 'drama', 2016, 111);
     bladeRunner = new Film('Blade Runner 2049', 'sci-fi', 2017, 164);
     dunkirk = new Film('Dunkirk', 'history', 2017, 96);
@@ -20,8 +22,11 @@ describe('Cinema', function () {
     trainspotting = new Film('T2 Trainspotting', 'drama', 2017, 117);
 
     films = [moonlight, bladeRunner, dunkirk, blackPanther, trainspotting];
+
     cinema = new Cinema(films);
+
   });
+
 
   it('should have a collection of films', function () {
     const actual = cinema.films;
@@ -67,5 +72,6 @@ describe('Cinema', function () {
     const actual = cinema.totalRunTime();
     assert.strictEqual(actual, 622);
   });
+  
 
 });
