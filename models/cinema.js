@@ -14,6 +14,10 @@ Cinema.prototype.filmByGenre = function (genre) {
   return this.films.filter(film => film.genre === genre);
 };
 
+Cinema.prototype.findByYear = function (year) {
+  return this.films.filter(film => film.year === year);
+};
+
 
 };
 
